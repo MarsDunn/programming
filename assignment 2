@@ -1,0 +1,92 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Programming_Assignment_2
+{
+    class DoubleMin
+    {
+        static void Main(string[] args)
+        {
+            int num1 = 0;
+            int num2 = 0;
+            int num3 = 0;
+            int num4 = 0;
+            int num5 = 0;
+            int temp = 0;
+
+            
+            Console.WriteLine("What is your name? ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine($"Thank you {name}! \n");
+
+            Console.Write("Please enter your first interger: ");
+            num1 = int.Parse(Console.ReadLine());
+
+            Console.Write("\nPlease enter your second interger: ");
+            num2 = int.Parse(Console.ReadLine());
+
+            Console.Write("\nPlease enter your third interger: ");
+
+            num3 = int.Parse(Console.ReadLine());
+
+            Console.Write("\nPlease enter your fourth interger: ");
+            num4 = int.Parse(Console.ReadLine());
+
+            Console.Write("\nPlease enter your fifth interger: ");
+            num5 = int.Parse(Console.ReadLine());
+
+
+            if (num1 > num2)
+            {
+                temp = num1;
+                num1 = num2;
+                num2 = temp;
+            }
+
+            if (num2 > num3)
+            {
+                temp = num2;
+                num2 = num3;
+                num3 = temp;
+            }
+
+            if (num3 > num4)
+            {
+                temp = num3;
+                num3 = num4;
+                num4 = temp;
+            }
+
+            if (num4 > num5)
+            {
+                temp = num4;
+                num4 = num5;
+                num5 = temp;
+            }
+
+            if (num5 > num1)
+            {
+                temp = num5;
+                num5 = num1;
+                num1 = temp;
+            }
+            
+
+
+            if (num4 > num5)
+            {
+                Console.WriteLine($"Your lowest intergers are {num4} and {num5}");
+            }
+
+            if(num4 == num5)
+            {
+                Console.WriteLine($"Your lowest intergers are {num5}");
+            }
+            Console.ReadKey();
+        }
+    }
+}
